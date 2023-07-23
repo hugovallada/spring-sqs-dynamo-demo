@@ -3,7 +3,6 @@ package github.com.hugovallada.sqs.config
 import com.amazon.sqs.javamessaging.ProviderConfiguration
 import com.amazon.sqs.javamessaging.SQSConnectionFactory
 import com.amazonaws.auth.DefaultAWSCredentialsProviderChain
-import com.amazonaws.regions.DefaultAwsRegionProviderChain
 import com.amazonaws.services.sqs.AmazonSQSClientBuilder
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.context.annotation.Bean
@@ -16,7 +15,7 @@ import javax.jms.Session
 @EnableJms
 class JMSConfig {
     @Value("\${aws.region}")
-    lateinit var region: String
+    private lateinit var region: String
 
     private lateinit var sqsConnectionFactory: SQSConnectionFactory
 

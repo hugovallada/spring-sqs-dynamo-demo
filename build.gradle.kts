@@ -24,6 +24,8 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("com.amazonaws:aws-java-sdk-sqs:1.11.887")
 	implementation("org.springframework:spring-jms:5.2.9.RELEASE")
+	compileOnly("com.amazonaws:aws-java-sdk-dynamodb:1.11.887")
+	implementation("io.github.boostchicken:spring-data-dynamodb:5.2.1")
 	implementation("com.amazonaws:amazon-sqs-java-messaging-lib:1.0.8")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
